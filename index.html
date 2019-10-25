@@ -239,6 +239,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/git-branch-usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yichen Li">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/bvatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fryDS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/25/git-branch-usage/" itemprop="url">git及其涉及branch的一些用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T13:02:29-04:00">
+                2019-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>由于做RCOS项目时进行了一次JS-&gt;Python-&gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。<br>git可以做到从repo里同步最新的代码到本地，一句git clone就可以：<br><code>git clone &lt;github-repo-name.git&gt;</code><br>这里如果没有指定branch的话，clone下来直接是origin。比如我们现在要把另外一个分支（如es7）pull下来，在git clone后面就要指定你的branch：<br><code>git clone -b &lt;branch-name&gt; &lt;github-repo-name.git&gt;</code><br>现在你就会发现你的目录里多了个文件夹，里面就是新鲜出炉的代码了。然后要是有什么更新的话，进入目录一句<code>git pull</code>就能同步。<br>不过这种情况还是从别的branch新clone了一下，现在我们要做的是把新branch的内容同步到原来的工作目录里。所以我们先进入原有的工作目录，然后<br><code>git remote -a</code><br>现在就能看到我们目前所在的branch以及remote repo里所有的branch。比如我们要切换到es7这个branch，现在就能从指定的新branch用checkout把代码同步下来了：<br><code>git checkout origin/es7</code><br>稍等一会儿后你的目录里就是新branch里的内容了。  </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/attending-career-fair/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -769,7 +889,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -777,6 +897,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
