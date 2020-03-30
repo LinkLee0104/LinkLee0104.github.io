@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;github-repo-name.git&amp;g">
+<meta name="description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;git-repo&amp;gt;这里如果没有指定br">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git及其涉及branch的一些用法">
+<meta property="og:title" content="git涉及branch的一些用法">
 <meta property="og:url" content="http://yoursite.com/2019/10/25/git-branch-usage/index.html">
-<meta property="og:site_name" content="fryDS">
-<meta property="og:description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;github-repo-name.git&amp;g">
+<meta property="og:site_name" content="Blog NJC6102HDK">
+<meta property="og:description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;git-repo&amp;gt;这里如果没有指定br">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-10-25T17:02:29.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git及其涉及branch的一些用法">
-<meta name="twitter:description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;github-repo-name.git&amp;g">
+<meta name="twitter:title" content="git涉及branch的一些用法">
+<meta name="twitter:description" content="由于做RCOS项目时进行了一次JS-&amp;gt;Python-&amp;gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。git可以做到从repo里同步最新的代码到本地，一句git clone就可以：git clone &amp;lt;git-repo&amp;gt;这里如果没有指定br">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>git及其涉及branch的一些用法 | fryDS</title>
+  <title>git涉及branch的一些用法 | Blog NJC6102HDK</title>
   
 
 
@@ -156,12 +156,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">fryDS</span>
+        <span class="site-title">Blog NJC6102HDK</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">served with memory chips and heap sauce</p>
+        <p class="site-subtitle">关门请注意，车辆起步请站稳扶好</p>
       
   </div>
 
@@ -252,7 +252,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fryDS">
+      <meta itemprop="name" content="Blog NJC6102HDK">
     </span>
 
     
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git及其涉及branch的一些用法</h1>
+          <h1 class="post-title" itemprop="name headline">git涉及branch的一些用法</h1>
         
 
         <div class="post-meta">
@@ -310,7 +310,7 @@
       
 
       
-        <p>由于做RCOS项目时进行了一次JS-&gt;Python-&gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。<br>git可以做到从repo里同步最新的代码到本地，一句git clone就可以：<br><code>git clone &lt;github-repo-name.git&gt;</code><br>这里如果没有指定branch的话，clone下来直接是origin。比如我们现在要把另外一个分支（如es7）pull下来，在git clone后面就要指定你的branch：<br><code>git clone -b &lt;branch-name&gt; &lt;github-repo-name.git&gt;</code><br>现在你就会发现你的目录里多了个文件夹，里面就是新鲜出炉的代码了。然后要是有什么更新的话，进入目录一句<code>git pull</code>就能同步。<br>不过这种情况还是从别的branch新clone了一下，现在我们要做的是把新branch的内容同步到原来的工作目录里。所以我们先进入原有的工作目录，然后<br><code>git remote -a</code><br>现在就能看到我们目前所在的branch以及remote repo里所有的branch。比如我们要切换到es7这个branch，现在就能从指定的新branch用checkout把代码同步下来了：<br><code>git checkout origin/es7</code><br>稍等一会儿后你的目录里就是新branch里的内容了。  </p>
+        <p>由于做RCOS项目时进行了一次JS-&gt;Python-&gt;JS的技术变动，现在项目组的后端github repo里有了好几个branch，包括新版的JS后端和之前的Python版。因此现在也就要重新把代码从另外一个branch里pull下来。<br>git可以做到从repo里同步最新的代码到本地，一句git clone就可以：<br><code>git clone &lt;git-repo&gt;</code><br>这里如果没有指定branch的话，clone下来直接是origin。比如我们现在要把另外一个分支pull下来，在git clone后面就要指定你的branch：<br><code>git clone -b &lt;branch-name&gt; &lt;git-repo&gt;</code><br>现在你就会发现你的目录里多了个文件夹，里面就是新鲜出炉的代码了。然后要是有什么更新的话，进入目录一句<code>git pull</code>就能同步。<br>不过这样还是从别的branch新clone了一下，现在我们要做的是把新branch的内容同步到原来的工作目录里。所以我们进入原有的工作目录，然后<br><code>git remote -a</code><br>现在就能看到我们目前所在的branch以及remote repo里所有的branch。比如我们要切换到es7这个branch，现在就能从指定的新branch用checkout把代码同步下来了：<br><code>git checkout origin/es7</code><br>稍等一会儿后你的目录里就是新branch里的内容了。</p>
 
       
     </div>
@@ -409,7 +409,7 @@
               <img class="site-author-image" itemprop="image" src="/images/bvatar.gif" alt="Yichen Li">
             
               <p class="site-author-name" itemprop="name">Yichen Li</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Yichen Li's personal blog</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -479,7 +479,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
